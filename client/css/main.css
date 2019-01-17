@@ -1,0 +1,133 @@
+/* Include Normalize */
+@import url('normalize.css');
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    width: 100w;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #292929;
+    color: white;
+}
+
+header {
+    height: 100px;
+    background: #171717;
+    color: #E1E1E1;
+    font-weight: 900;
+    font-size: 2em;
+    border-top: 4px solid #2F3E9E;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header > img.logo {
+    max-width: 5.8rem;
+    margin-right: 0.8rem;
+}
+
+main {
+    position: relative;
+    height: 400px;
+    background: url("../img/poster.jpg") no-repeat;
+}
+
+main > .bg {
+    background: black;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+}
+
+main > span {
+    position: absolute;
+    top: 150px;
+    left: 25%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+main > .box {
+    position: absolute;
+    top: 100px;
+    left: 23%;
+    width: 250px;
+    height: 180px;
+    border: 7px solid #0088FF;
+    opacity: 0.5;
+    z-index: 1;
+}
+main > .inner-box {
+    position: absolute;
+    top: 100px;
+    left: 23%;
+    width: 250px;
+    height: 180px;
+    border: 15px solid #303F9F;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background: #171717;
+    border-bottom: 4px solid #2F3E9E;
+    font-size: 0.8rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        /* background-position: 0 -50%; */
+    }
+    main > .box, main > .inner-box {
+        left: 20%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        background-position: 40% 0%;
+    }
+    main > span {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        background-position: 20% 0%;
+    }
+    header {
+        height: 70px;
+        font-size: 1.6em;
+    }
+    header > img.logo {
+        max-width: 4rem;
+        margin-right: 0.4reml
+    }
+    main > .box {
+        border-width: 5px;
+        width: 180px;
+        height: 150px;
+    }
+    main > .inner-box {
+        border-width: 10px;
+        width: 180px;
+        height: 150px;
+    }
+}
