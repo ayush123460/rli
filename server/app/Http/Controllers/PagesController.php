@@ -8,6 +8,6 @@ class PagesController extends Controller
 {
     public function index() {
         // function returns home page
-        return view('header');
+        return view('pages.home');
     }
 }

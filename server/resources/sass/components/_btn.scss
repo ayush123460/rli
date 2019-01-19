@@ -1,0 +1,21 @@
+.btn {
+    @include object(120px, 35px, transparent);
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 10pt;
+    transition: all 0.3s linear;
+
+    &.btn-primary {
+        background: $hero-box-inner;
+        border-color: $hero-box-outer;
+    }
+
+    &:hover {
+        background: white;
+        color: black;
+        cursor: pointer;
+    }
+}

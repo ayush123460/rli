@@ -1,17 +1,20 @@
 // Base
-@import "base/base";
 @import "base/colors";
-
-// Components
-@import "components/container";
-@import "components/container-fluid";
-
-// Layouts
-
-// Page Specific
+@import "base/base";
 
 // Abstracts
 @import "abstract/objects";
 
 // Vendor Libs
 @import "vendor/normalize";
+
+// Components
+@import "components/container";
+@import "components/container-fluid";
+@import "components/btn";
+
+// Layouts
+@import "layout/header";
+
+// Page Specific
+@import "pages/home";

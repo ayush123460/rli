@@ -1,0 +1,68 @@
+header {
+    @include object(100%, 100px, $background-header);
+    border-top: 4px solid $header-border;
+
+    .container {
+        margin: 0 auto;
+        width: 2000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    a, a:visited, a:active {
+        margin-top: 35px;
+        color: darken(white, 10%);
+        text-decoration: none;
+        height: 60px;
+
+        &.active {
+            color: white;
+            font-weight: 700;
+            border-bottom: 2px solid $hero-box-outer;
+        }
+
+        &:hover {
+            border-bottom: 2px solid $hero-box-inner;
+        }
+    }
+
+    .left {
+        @include object(15rem, auto, transparent);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 12pt;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: $header-text;
+        font-size: 2em;
+        font-weight: 900;
+
+        img.logo {
+            max-width: 85px;
+        }
+    }
+
+    .right {
+        @include object(15rem, auto, transparent);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-size: 12pt;
+    }
+
+    .login {
+        position: absolute;
+        top: 32px;
+        right: 150px;
+    }
+}
