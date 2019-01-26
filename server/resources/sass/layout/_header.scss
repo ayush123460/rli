@@ -44,7 +44,7 @@ header {
         align-items: center;
         color: $header-text;
         font-size: 2em;
-        font-weight: 900;
+        font-weight: 900 !important;
 
         img.logo {
             max-width: 85px;

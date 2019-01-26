@@ -431,6 +431,7 @@ template {
 }
 
 .title h1 {
+  font-weight: 700 !important;
   font-size: 2.8rem;
   margin-top: 0px;
   text-transform: uppercase;
@@ -483,7 +484,7 @@ template {
   padding: 10px;
   padding-bottom: 0;
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 500 !important;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -634,7 +635,7 @@ header .main {
   align-items: center;
   color: #E1E1E1;
   font-size: 2em;
-  font-weight: 900;
+  font-weight: 900 !important;
 }
 
 header .main img.logo {
@@ -709,7 +710,7 @@ footer {
   top: 80px;
   left: 25%;
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 700 !important;
   text-transform: uppercase;
   z-index: 2;
 }

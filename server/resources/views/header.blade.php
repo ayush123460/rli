@@ -14,7 +14,7 @@
     {{-- Import CSS --}}
     <link rel="stylesheet" type="text/css" href="{{ @asset('css/main.css') }}">
     {{-- Import Font --}}
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,900" rel="stylesheet">
 </head>
 <body>
     <header>
