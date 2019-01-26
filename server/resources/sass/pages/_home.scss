@@ -44,3 +44,7 @@
         left: 23%;
     }
 }
+
+.discord-banner {
+    @include object(100%, 75px, #2C2F33);
+}
