@@ -13,6 +13,11 @@
         border-color: $hero-box-outer;
     }
 
+    &.btn-yt {
+        background: #FF0000;
+        border-color: darken(#FF0000, 10%);
+    }
+
     &:hover {
         background: white;
         color: black;

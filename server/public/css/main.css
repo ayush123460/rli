@@ -399,7 +399,8 @@ template {
 }
 
 .container {
-  max-width: 800px;
+  margin: 0 auto;
+  max-width: 1000px;
   width: 100%;
 }
 
@@ -453,6 +454,11 @@ template {
   border-color: #0088FF;
 }
 
+.btn.btn-yt {
+  background: #FF0000;
+  border-color: #cc0000;
+}
+
 .btn:hover {
   background: white;
   color: black;
@@ -466,7 +472,7 @@ template {
   background: #404040;
   border: 1px solid #4d4d4d;
   border-radius: 4px;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease-in-out;
 }
 
 .card:hover {
@@ -477,6 +483,7 @@ template {
   padding: 10px;
   padding-bottom: 0;
   font-size: 1.4rem;
+  font-weight: 300;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -484,6 +491,7 @@ template {
 .card .card-subtitle {
   padding: 5px 10px 15px 10px;
   font-size: 0.8rem;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -496,15 +504,77 @@ template {
 }
 
 .card .card-body {
+  position: relative;
   padding: 10px;
   width: 100%;
 }
 
+.card .card-body .prize {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #0088FF;
+}
+
 .card .card-cta {
   padding: 10px;
+  padding-bottom: 20px;
   font-size: 0.8em;
   color: #3d50c5;
   text-transform: uppercase;
+}
+
+.card .card-cta a,
+.card .card-cta a:visited,
+.card .card-cta a:active {
+  color: #3d50c5;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.card .card-cta a:hover,
+.card .card-cta a:visited:hover,
+.card .card-cta a:active:hover {
+  color: #0088FF;
+}
+
+.panel {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 250px 100px 1fr;
+  grid-template-areas: "image space title";
+  justify-content: space-evenly;
+  font-weight: 300;
+  color: #C5C5C5;
+}
+
+.panel .panel-img {
+  width: 250px;
+  height: 250px;
+  background: gray;
+  border-radius: 15px;
+  grid-area: image;
+  transition: all 0.3s ease-in-out;
+}
+
+.panel .panel-img:hover {
+  cursor: pointer;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+.panel .panel-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  grid-area: title;
+}
+
+.panel .panel-title .panel-body {
+  font-size: 1.2rem;
 }
 
 header {
@@ -588,6 +658,17 @@ header .login {
   right: 150px;
 }
 
+footer {
+  background: #171717;
+  border-bottom: 4px solid #2F3E9E;
+  font-size: 1rem;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -643,5 +724,38 @@ header .login {
   width: 100%;
   height: 75px;
   background: #2C2F33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.tournaments {
+  margin-top: 30px;
+}
+
+.yt {
+  margin-top: 60px;
+  height: 630px;
+  padding: 50px;
+  background: #1a1a1a;
+}
+
+.yt .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.yt .row p {
+  font-size: 2em;
+}
+
+.partners {
+  margin-top: 60px;
+  height: 1000px;
 }
 

@@ -1,0 +1,37 @@
+.panel {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 250px 100px 1fr;
+    grid-template-areas: "image space title";
+    justify-content: space-evenly;
+
+    font-weight: 300;
+    color: #C5C5C5;
+
+    .panel-img {
+        @include object(250px, 250px, lighten(black, 50%));
+        border-radius: 15px;
+        grid-area: image;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    .panel-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 2rem;
+        grid-area: title;
+
+        .panel-body {
+            font-size: 1.2rem;
+        }
+    }
+
+    
+}

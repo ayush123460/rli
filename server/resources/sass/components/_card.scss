@@ -3,7 +3,7 @@
     @include object(400px, auto, lighten(black, 25%));
     border: 1px solid lighten(black, 30%);
     border-radius: 4px;
-    transition: all 0.2s linear;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
@@ -13,6 +13,7 @@
         padding: 10px;
         padding-bottom: 0;
         font-size: 1.4rem;
+        font-weight: 300;
         text-transform: uppercase;
         font-weight: bold;
         // color: lighten(black, 20%);
@@ -21,6 +22,7 @@
     .card-subtitle {
         padding: 5px 10px 15px 10px;
         font-size: 0.8rem;
+        font-weight: 300;
         text-transform: uppercase;
         // color: lighten(black, 20%);
     }
@@ -31,14 +33,35 @@
     }
 
     .card-body {
+        position: relative;
         padding: 10px;
         width: 100%;
+
+        .prize {
+            position: absolute;
+            top: 30%;
+            right: 10%;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: $hero-box-outer;
+        }
     }
 
     .card-cta {
         padding: 10px;
+        padding-bottom: 20px;
         font-size: 0.8em;
         color: lighten($hero-box-inner, 10%);
         text-transform: uppercase;
+
+        a, a:visited, a:active {
+            color: lighten($hero-box-inner, 10%);
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                color: $hero-box-outer;
+            }
+        }
     }
 }

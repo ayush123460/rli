@@ -13,6 +13,8 @@
     <meta name="description" content="Internet home of the largest Rocket League&reg; community in Asia.">
     {{-- Import CSS --}}
     <link rel="stylesheet" type="text/css" href="{{ @asset('css/main.css') }}">
+    {{-- Import Font --}}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,900" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -36,11 +38,13 @@
             </div>
         </div>
         {{-- Login/Logout button --}}
-        <div class="login">
+        {{-- <div class="login">
             <button class="btn btn-primary">Login</button>
-        </div>
+        </div> --}}
     </header>
         @yield('content')
-    <footer></footer>
+    <footer>
+        &copy; 2019 RL India All Rights Reserved. &copy; 2019 Psyonix, Inc. All Rights to Rocket League Reserved.
+    </footer>
 </body>
 </html>
