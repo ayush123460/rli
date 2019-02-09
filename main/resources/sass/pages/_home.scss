@@ -1,0 +1,160 @@
+.hero {
+    position: relative;
+    @include object(100%, 400px, url("../../../public/img/poster.jpg") no-repeat);
+    background-size: cover;
+    
+    .bg {
+        @include object(100%, 100%, black);
+        opacity: 0.6;
+    }
+
+    .box {
+        position: absolute;
+        top: 50px;
+        left: 23%;
+        width: 270px;
+        height: 190px;
+        border: 7px solid $hero-box-outer;
+        opacity: 0.5;
+        z-index: 1;
+    }
+
+    .inner-box {
+        position: absolute;
+        top: 50px;
+        left: 23%;
+        width: 270px;
+        height: 190px;
+        border: 15px solid $hero-box-inner;
+    }
+
+    span {
+        position: absolute;
+        top: 80px;
+        left: 25%;
+        font-size: 2.5rem;
+        font-weight: 700 !important;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+
+    .cta {
+        position: absolute;
+        top: 300px;
+        left: 23%;
+    }
+}
+
+.discord-banner {
+    @include object(100%, 75px, #2C2F33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+
+    img {
+        max-width: 65px;
+    }
+}
+.tournaments {
+    margin-top: 30px;
+}
+
+.yt {
+    margin-top: 60px;
+    height: 630px;
+    padding: 50px;
+    background: lighten(black, 10%);
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+        p {
+            font-size: 2em;
+        }
+    }
+}
+
+.partners {
+    margin-top: 60px;
+    // height: 1000px;
+}
+
+@media screen and (max-width: 1800px) {
+    .tournaments > .container-fluid {
+        max-width: 90%;
+    }
+    .tournaments > .container-fluid > .row {
+        // flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .tournaments > .container-fluid {
+        max-width: 100%;
+        // flex-direction: column;
+        // justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .tournaments > .container-fluid > .row {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .hero > .box, .hero > .inner-box {
+        left: 20%;
+    }
+
+    .yt {
+        height: auto;
+        .container-fluid > .row > iframe {
+            width: 90%;
+            height: 360px;
+        }
+        .row > p {
+            font-size: 1.5em;
+        }
+    }
+
+    .yt > .container-fluid > .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .hero {
+        background-position: 40% 0%;
+    }
+    .hero > span {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        background-position: 20% 0%;
+    }
+    .hero > .box {
+        border-width: 5px;
+        width: 180px;
+        height: 150px;
+    }
+    .hero > .inner-box {
+        border-width: 10px;
+        width: 180px;
+        height: 150px;
+    }
+}

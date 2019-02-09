@@ -15,27 +15,42 @@
     <link rel="stylesheet" type="text/css" href="{{ @asset('css/main.css') }}">
     {{-- Import Font --}}
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,900" rel="stylesheet">
+    <script src="{{ @asset('js/main.js') }}"></script>
 </head>
 <body>
     <header>
         <div class="container">
             {{-- Left Side Navigation --}}
-            <div class="left">
-                <a href="/" class="active">home</a>
+            {{-- <div class="left">
+                <a href="/">home</a>
                 <a href="#">blog</a>
                 <a href="#">tournaments</a>
-            </div>
+            </div> --}}
             {{-- Logo --}}
             <div class="main">
                 <img src="{{ @asset("img/logo.png") }}" alt="RL India Logo" class="logo">
                 RL INDIA
             </div>
             {{-- Right side Navigation --}}
-            <div class="right">
+            {{-- <div class="right">
                 <a href="#">about</a>
                 <a href="#">donate</a>
                 <a href="#">contact</a>
-            </div>
+            </div> --}}
+            {{-- <div class="mob" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div> --}}
+            {{-- <div class="mobile">
+                <a href="/">home</a>
+                {{-- <a href="#">blog</a> --}}
+                {{-- <a href="#">tournaments</a>
+                <a href="#">about</a>
+                <a href="#">donate</a>
+                <a href="#">contact</a> --}}
+                {{-- <button class="btn btn-primary">Login</button>
+            </div> --}}
         </div>
         {{-- Login/Logout button --}}
         {{-- <div class="login">

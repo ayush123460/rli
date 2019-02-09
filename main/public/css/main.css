@@ -409,11 +409,24 @@ template {
   max-width: 80%;
 }
 
+@media screen and (max-width: 1200px) {
+  .container-fluid {
+    max-width: 100%;
+  }
+}
+
 .row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .row {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .title {
@@ -468,6 +481,7 @@ template {
 
 .card {
   padding: 0;
+  display: block;
   width: 400px;
   height: auto;
   background: #404040;
@@ -541,6 +555,12 @@ template {
   color: #0088FF;
 }
 
+@media screen and (max-width: 960px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
 .panel {
   padding: 20px;
   display: grid;
@@ -559,6 +579,13 @@ template {
   border-radius: 15px;
   grid-area: image;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel .panel-img img {
+  width: 150px;
 }
 
 .panel .panel-img:hover {
@@ -578,7 +605,32 @@ template {
   font-size: 1.2rem;
 }
 
+@media screen and (max-width: 720px) {
+  .panel {
+    grid-template-columns: 150px 20px auto;
+  }
+
+  .panel .panel-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .panel .panel-img img {
+    width: 80px;
+  }
+
+  .panel .panel-title {
+    font-size: 1.5rem;
+  }
+
+  .panel .panel-title .panel-body {
+    margin-top: -10px;
+    font-size: 1rem;
+  }
+}
+
 header {
+  position: relative;
   width: 100%;
   height: 100px;
   background: #171717;
@@ -587,7 +639,6 @@ header {
 
 header .container {
   margin: 0 auto;
-  width: 2000px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -657,6 +708,181 @@ header .login {
   position: absolute;
   top: 32px;
   right: 150px;
+}
+
+header .mob,
+header .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    position: relative;
+  }
+
+  header .left,
+  header .right,
+  header .login {
+    display: none;
+  }
+
+  header .mob {
+    position: absolute;
+    top: 35px;
+    right: 70px;
+    display: block;
+    width: 50px;
+    z-index: 99;
+  }
+
+  header .mob .bar {
+    transition: 0.2s ease-in-out;
+  }
+
+  header .mob .bar:not(:nth-child(2)) {
+    width: 50px;
+    height: 3px;
+    background: white;
+  }
+
+  header .mob .bar:nth-child(2) {
+    width: 37px;
+    height: 3px;
+    background: white;
+    margin: 8px 0;
+  }
+
+  header .mob.active .bar:first-child {
+    -webkit-animation: barOne 0.2s ease-in-out forwards;
+            animation: barOne 0.2s ease-in-out forwards;
+  }
+
+@-webkit-keyframes barOne {
+    0% {
+      -webkit-transform: none;
+              transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateY(11.5px);
+              transform: translateY(11.5px);
+    }
+
+    100% {
+      -webkit-transform: translateY(11.5px) rotate(45deg);
+              transform: translateY(11.5px) rotate(45deg);
+    }
+}
+
+@keyframes barOne {
+    0% {
+      -webkit-transform: none;
+              transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateY(11.5px);
+              transform: translateY(11.5px);
+    }
+
+    100% {
+      -webkit-transform: translateY(11.5px) rotate(45deg);
+              transform: translateY(11.5px) rotate(45deg);
+    }
+}
+
+  header .mob.active .bar:nth-child(2) {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  header .mob.active .bar:last-child {
+    -webkit-animation: barTwo 0.2s ease-in-out forwards;
+            animation: barTwo 0.2s ease-in-out forwards;
+  }
+
+@-webkit-keyframes barTwo {
+    0% {
+      -webkit-transform: none;
+              transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateY(-11.5px);
+              transform: translateY(-11.5px);
+    }
+
+    100% {
+      -webkit-transform: translateY(-11.5px) rotate(-45deg);
+              transform: translateY(-11.5px) rotate(-45deg);
+    }
+}
+
+@keyframes barTwo {
+    0% {
+      -webkit-transform: none;
+              transform: none;
+    }
+
+    25% {
+      -webkit-transform: translateY(-11.5px);
+              transform: translateY(-11.5px);
+    }
+
+    100% {
+      -webkit-transform: translateY(-11.5px) rotate(-45deg);
+              transform: translateY(-11.5px) rotate(-45deg);
+    }
+}
+
+  header .mob:hover {
+    cursor: pointer;
+  }
+
+  header .mobile {
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  header .mobile a,
+  header .mobile a:visited,
+  header .mobile a:active {
+    height: 20px;
+    width: auto;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  header .mobile.active {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    height: 80px;
+  }
+
+  header .main {
+    font-size: 1.5em;
+  }
+
+  header .main > .logo {
+    width: 75px !important;
+  }
+
+  header .mob {
+    top: 25px;
+  }
 }
 
 footer {
@@ -733,6 +959,10 @@ footer {
   font-style: italic;
 }
 
+.discord-banner img {
+  max-width: 65px;
+}
+
 .tournaments {
   margin-top: 30px;
 }
@@ -757,6 +987,88 @@ footer {
 
 .partners {
   margin-top: 60px;
-  height: 1000px;
+}
+
+@media screen and (max-width: 1800px) {
+  .tournaments > .container-fluid {
+    max-width: 90%;
+  }
+
+  .tournaments > .container-fluid > .row {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .tournaments > .container-fluid {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .tournaments > .container-fluid > .row {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .hero > .box,
+  .hero > .inner-box {
+    left: 20%;
+  }
+
+  .yt {
+    height: auto;
+  }
+
+  .yt .container-fluid > .row > iframe {
+    width: 90%;
+    height: 360px;
+  }
+
+  .yt .row > p {
+    font-size: 1.5em;
+  }
+
+  .yt > .container-fluid > .row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .hero {
+    background-position: 40% 0%;
+  }
+
+  .hero > span {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    background-position: 20% 0%;
+  }
+
+  .hero > .box {
+    border-width: 5px;
+    width: 180px;
+    height: 150px;
+  }
+
+  .hero > .inner-box {
+    border-width: 10px;
+    width: 180px;
+    height: 150px;
+  }
+}
+
+.overflow {
+  overflow: hidden;
 }
 

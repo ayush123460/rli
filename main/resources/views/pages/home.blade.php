@@ -15,7 +15,7 @@
 </section>
 
 <section class="discord-banner">
-    discord.gg/rlindia
+    <img src="{{ @asset('img/partner.png') }}" alt="Discord Partner Badge"> discord.gg/rlindia
 </section>
 
 <section class="tournaments">
@@ -29,7 +29,7 @@
                 <div class="card">
                     <div class="card-title">APL 3.0 Qualifier 1</div>
                     <div class="card-subtitle">APL eSports</div>
-                    <div class="card-img"></div>
+                    <div class="card-img"><img src="{{ @asset("img/events/apl3.jpg") }}"></div>
                     <div class="card-body">
                         Format: 3v3
                         <br><br>
@@ -44,7 +44,7 @@
                 <div class="card">
                     <div class="card-title">Community Cup 8</div>
                     <div class="card-subtitle">RL India</div>
-                    <div class="card-img"></div>
+                    <div class="card-img"><img src="{{ @asset('img/events/cc8.jpg') }}"></div>
                     <div class="card-body">
                         Format: 3v3
                         <br><br>
@@ -60,7 +60,7 @@
                 <div class="card">
                     <div class="card-title">Aerial RL x RL India</div>
                     <div class="card-subtitle">Aerial RL x RL India</div>
-                    <div class="card-img"></div>
+                    <div class="card-img"><img src="{{ @asset('img/events/aerialxrli.jpg') }}"></div>
                     <div class="card-body">
                         Format: 3v3
                         <br><br>
@@ -69,7 +69,7 @@
                         Time: 1430 hrs IST
                         <div class="prize">100 RL Keys</div>
                     </div>
-                    <div class="card-cta"><a href="https://smash.gg/rlicc8" target="_blank">more info</a></div>
+                    <div class="card-cta"><a href="https://smash.gg/aerialxrli" target="_blank">more info</a></div>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
         <div class="container">
                 <div class="row">
                     <div class="panel">
-                        <div class="panel-img"><a href="http://division6.org" target="_blank"></a></div>
+                        <div class="panel-img" style="background: #6441A4;"><a href="http://twitch.tv/rlindia" target="_blank"><img src="{{ @asset('img/sponsor/twitch.png') }}"></a></div>
                         <div class="panel-title">
                             Twitch
                             <div class="panel-body">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="row">
                     <div class="panel">
-                        <div class="panel-img"><a href="http://division6.org" target="_blank"></a></div>
+                        <div class="panel-img" style="background: black;"><a href="http://division6.org" target="_blank"><img src="{{ @asset('img/sponsor/d6.png') }}"></a></div>
                         <div class="panel-title">
                             Division6
                             <div class="panel-body">
@@ -125,7 +125,7 @@
                 </div>
                 <div class="row">
                     <div class="panel">
-                        <div class="panel-img"><a href="http://division6.org" target="_blank"></a></div>
+                        <div class="panel-img" style="background: #7289DA;"><a href="http://discord.gg/rlindia" target="_blank"><img src="{{ @asset('img/discord.png') }}"></a></div>
                         <div class="panel-title">
                             Discord
                             <div class="panel-body">

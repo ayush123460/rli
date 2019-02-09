@@ -14,6 +14,13 @@
         border-radius: 15px;
         grid-area: image;
         transition: all 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 150px;
+        }
 
         &:hover {
             cursor: pointer;
@@ -31,7 +38,29 @@
         .panel-body {
             font-size: 1.2rem;
         }
-    }
+    } 
+}
 
-    
+@media screen and (max-width: 720px) {
+    .panel {
+        grid-template-columns: 150px 20px auto;
+
+        .panel-img {
+            width: 150px;
+            height: 150px;
+
+            img {
+                width: 80px;
+            }
+        }
+
+        .panel-title {
+            font-size: 1.5rem;
+
+            .panel-body {
+                margin-top: -10px;
+                font-size: 1rem;
+            }
+        }
+    }
 }
